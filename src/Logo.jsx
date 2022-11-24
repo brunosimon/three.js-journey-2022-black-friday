@@ -1,9 +1,8 @@
 import * as THREE from 'three'
-import { RigidBody } from "@react-three/rapier";
-import { useControls } from "leva";
-import { useRef } from 'react';
-import { useEffect } from 'react';
-import { useGLTF } from '@react-three/drei';
+import { RigidBody } from '@react-three/rapier'
+import { useControls } from 'leva'
+import { useRef } from 'react'
+import { useGLTF } from '@react-three/drei'
 
 export default function Logo()
 {
