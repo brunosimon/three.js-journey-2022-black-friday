@@ -21,7 +21,13 @@ export default function Logo()
     const color = new THREE.Color(options.color)
 
     return <>
-        <RigidBody ref={ body } colliders="hull" position={ [ 1, 4, 1 ] } restitution={ options.restitution }>
+        {/* <group rotation={ [ 0, 0.7, 0 ] } position={ [ - 1, 2.5, 6 ] }>
+            <mesh geometry={ model.nodes.logo.geometry } rotation={ [ Math.PI * 0.5, 0, 0 ] }>
+                <meshBasicMaterial color={ [ color.r * options.intensity, color.g * options.intensity, color.b * options.intensity ] } toneMapped={ false }/>
+            </mesh>
+            <pointLight color={ color } />
+        </group> */}
+        <RigidBody ref={ body } colliders="hull" position={ [ 1, 4, 2 ] } restitution={ options.restitution }>
             <mesh geometry={ model.nodes.logo.geometry } rotation-x={ - Math.PI * 0.5 }>
                 <meshBasicMaterial color={ [ color.r * options.intensity, color.g * options.intensity, color.b * options.intensity ] } toneMapped={ false }/>
             </mesh>

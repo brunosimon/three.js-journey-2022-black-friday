@@ -16,14 +16,14 @@ import Button from './Button.jsx'
 
 export default function Experience()
 {
-    const { controls } = useThree()
+    const { controls, gl, camera } = useThree()
 
     useEffect(() =>
     {
         if(controls)
         {
             controls.target.x = 1
-            controls.target.z = 1
+            controls.target.z = 3
         }
     }, [ controls ])
 
@@ -38,9 +38,9 @@ export default function Experience()
         <OrbitControls
             makeDefault
             maxPolarAngle={ Math.PI * 0.49 }
-            enablePan={false}
-            minDistance={1}
-            maxDistance={20}
+            enablePan={ false }
+            minDistance={ 1 }
+            maxDistance={ 30 }
         />
 
         <Effects />

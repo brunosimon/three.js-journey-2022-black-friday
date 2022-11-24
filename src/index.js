@@ -6,6 +6,9 @@ import { Leva } from 'leva'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
+const portrait = window.innerHeight > window.innerWidth
+const portraitMultiplier = portrait ? 2 : 1
+
 root.render(
     <>
         <Canvas
@@ -14,7 +17,7 @@ root.render(
                 fov: 45,
                 near: 0.1,
                 far: 200,
-                position: [ 6, 8, 12 ]
+                position: [ 6 * portraitMultiplier, 8 * portraitMultiplier, 12 * portraitMultiplier ]
             } }
         >
             <Experience />
